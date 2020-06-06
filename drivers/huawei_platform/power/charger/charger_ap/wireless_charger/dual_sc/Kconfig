@@ -1,0 +1,22 @@
+#
+# huawei dual sc device drivers
+#
+
+config WIRELESS_DUAL_SC
+	bool "wireless_dual sc"
+	default n
+	help
+	  Say Y here to enable dual_sc driver.
+	  The dual_sc is an soc for wireless charge-pump converter.
+	  It is fully compliant with the latest Qi receiver to make
+	  the input current to be half the current delivered to the output.
+
+config WIRELESS_DUAL_SC_CP_HL1506
+	bool "WIRELESS_DUAL_SC_CP_HL1506"
+	depends on WIRELESS_DUAL_SC
+	default n
+	help
+	  Say Y here to enable dual cp_hl1506 driver.
+	  The hl1506 is an soc for wireless charge-pump converter.
+	  It is fully compliant with the latest Qi receiver to make
+	  the input current to be half the current delivered to the output.
